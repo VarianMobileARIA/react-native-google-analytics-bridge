@@ -5,12 +5,12 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
-    compileSdkVersion safeExtGet('compileSdkVersion', 26)
-    buildToolsVersion safeExtGet('buildToolsVersion', "26.0.3")
+    compileSdkVersion safeExtGet('compileSdkVersion', 28)
+    buildToolsVersion safeExtGet('buildToolsVersion', "28.0.3")
 
     defaultConfig {
-        minSdkVersion safeExtGet('minSdkVersion', 23)
-        targetSdkVersion safeExtGet('targetSdkVersion', 26)
+        minSdkVersion safeExtGet('minSdkVersion', 24)
+        targetSdkVersion safeExtGet('targetSdkVersion', 28)
         versionCode 1
         versionName "1.0"
     }
@@ -21,7 +21,7 @@ android {
 }
 
 dependencies {
-    compile project(':ReactAndroid')
-    compile "com.google.android.gms:play-services-analytics:${safeExtGet('googlePlayServicesVersion', '+')}"
-    compile "com.google.android.gms:play-services-tagmanager-v4-impl:${safeExtGet('googlePlayServicesVersion', '+')}"
+    api project(':ReactAndroid')
+    api "com.google.android.gms:play-services-analytics:${safeExtGet('googlePlayServicesVersion', '+')}"
+    api "com.google.android.gms:play-services-tagmanager-v4-impl:${safeExtGet('googlePlayServicesVersion', '+')}"
 }
